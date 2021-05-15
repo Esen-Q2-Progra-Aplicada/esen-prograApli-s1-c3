@@ -22,6 +22,9 @@ class Person:
         message = f"created the person with name: {name} and age: {age}"
         return message
 
+    def __repr__(self):
+        return f"Person(id:{self.id}, name:{self.name}, age:{self.age})"
+
 
 person = Person(1, "ted", 23)
 print(person.name)
@@ -33,3 +36,7 @@ message = person.createPersonSendMessage()
 print(message)
 message = person.createPersonWithNameAgeSendMessage("rod", 42)
 print(message)
+
+
+person = Person(2, "ron", 35)
+print(person)
